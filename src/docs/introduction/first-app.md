@@ -272,7 +272,7 @@ This new route will take some data into our application and then select only wha
 <div class="class-mode">
 
 ```php
-$app->post('/notes/new', function () use($db) {
+$app->post('/notes/new', function () use($app, $db) {
   // get data from request
   // save items
   // return success message
