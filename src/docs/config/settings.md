@@ -33,7 +33,7 @@ By default, Leaf will display all errors and warnings you encounter while develo
 Note that when you set `debug` to `false`, Leaf will automatically turn off error reporting and display a custom error page to users. You can customize this page using Leaf's `setError` method.
 
 ```php
-$app->setError(function () {
+$app->setError(function () { // return ERROR Call to undefined method Leaf\App::setError()
   echo "Custom Error Handler!";
 });
 ```
