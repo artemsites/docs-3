@@ -56,7 +56,7 @@ tick(); // will use today's date
 Calling `tick()` without parameters returns a fresh Tick object. You can then use any of the tick methods to parse, manipulate, or display the date.
 
 ```php
-$now = tick()
+$now = tick();
 ```
 
 This is essentially the same as calling `tick('with today\'s date')`.
@@ -66,9 +66,9 @@ This is essentially the same as calling `tick('with today\'s date')`.
 Parse the given string in ISO 8601 format (a space instead of the 'T' is allowed) and return a Tick object instance.
 
 ```php
-tick('2018-04-04T16:00:00.000Z')
-tick('2018-04-13 19:18:17.040+02:00')
-tick('2018-04-13 19:18')
+tick('2018-04-04T16:00:00.000Z');
+tick('2018-04-13 19:18:17.040+02:00');
+tick('2018-04-13 19:18');
 ```
 
 ### Date
@@ -77,7 +77,7 @@ Create a Tick object with a pre-existing native DateTime object.
 
 ```php
 $d = new DateTime();
-tick(d);
+tick($d);
 ```
 
 ## Get + Set
@@ -99,7 +99,7 @@ Accepts numbers from 0 to 999. If the range is exceeded, it will bubble up to th
 
 ```php
 tick()->millisecond(); // gets current millisecond
-tick()->millisecond(1); // returns new tick o->ject
+tick()->millisecond(1); // returns new tick object
 ```
 
 ### Second
@@ -132,7 +132,7 @@ Accepts numbers from 0 to 23. If the range is exceeded, it will bubble up to the
 
 ```php
 tick()->hour(); // gets current hour
-newDate = tick()->hour(12); // returns new tick object
+$newDate = tick()->hour(12); // returns new tick object
 ```
 
 ### Date of Month
@@ -240,7 +240,7 @@ Returns a cloned Tick object with a specified amount of time added.
 
 ```php
 $a = tick();
-$b = a->add(7, 'day')
+$b = $a->add(7, 'day')
 
 // $a -> the original value and will not change
 // $b -> the manipulation result
